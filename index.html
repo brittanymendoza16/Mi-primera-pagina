@@ -3,40 +3,116 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Pagina Web</title>
+  <title>Café de Origen | Tienda</title>
   <!-- Bootstrap CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .hero-section {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1447933601403-0c6688de566e?q=80&w=1200') center/cover;
+      color: white;
+      padding: 100px 0;
+    }
+    .card-img-top {
+      height: 220px;
+      object-fit: cover;
+    }
+  </style>
 </head>
-<body class="bg-light p-4">
+<body class="bg-light">
 
-  <div class="container">
+  <!-- Navegación -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-warning" href="#">☕ Café Supremo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#productos">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner / Hero -->
+  <section class="hero-section text-center">
+    <div class="container">
+      <h1 class="display-4 fw-bold">El Mejor Café Recién Tostado</h1>
+      <p class="lead">Granos de especialidad seleccionados a mano para la taza perfecta.</p>
+      <a href="#productos" class="btn btn-warning btn-lg fw-bold rounded-pill mt-3">Ver Catálogo</a>
+    </div>
+  </section>
+
+  <!-- Sección de Productos -->
+  <section id="productos" class="container my-5">
+    <h2 class="text-center fw-bold mb-4">Nuestros Cafés</h2>
     <div class="row g-4">
       
-      <!-- Tarjeta 1 -->
+      <!-- Producto 1 -->
       <div class="col-12 col-md-4">
-        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-          <img src="ruta-de-tu-imagen1.jpg" class="card-img-top" alt="Oruro" style="height: 200px; object-fit: cover;">
-          <div class="card-body">
-            <h5 class="card-title text-danger fw-bold">Oruro</h5>
-            <p class="card-text text-muted">Oruro es una ciudad ubicada en el altiplano de Bolivia. Es conocida por su historia minera...</p>
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+          <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?q=80&w=600" class="card-img-top" alt="Café Espresso">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">Espresso Blend</h5>
+            <p class="card-text text-muted flex-grow-1">Notas de chocolate oscuro y caramelo. Ideal para cafeteras espresso.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="fs-5 fw-bold text-success">$12.50</span>
+              <button class="btn btn-outline-dark btn-sm rounded-pill">Comprar</button>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Tarjeta 2 -->
+      <!-- Producto 2 -->
       <div class="col-12 col-md-4">
-        <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden">
-          <img src="ruta-de-tu-imagen2.jpg" class="card-img-top" alt="Virgen del Socavón" style="height: 200px; object-fit: cover;">
-          <div class="card-body">
-            <h5 class="card-title text-danger fw-bold">Virgen del Socavón</h5>
-            <p class="card-text text-muted">El monumento a la Virgen del Socavón es uno de los símbolos más representativos...</p>
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+          <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600" class="card-img-top" alt="Café Tostado Medio">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">Origen Orgánico</h5>
+            <p class="card-text text-muted flex-grow-1">Tueste medio con notas frutales y acidez balanceada.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="fs-5 fw-bold text-success">$14.00</span>
+              <button class="btn btn-outline-dark btn-sm rounded-pill">Comprar</button>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Repite el bloque <div class="col-12 col-md-4"> para las demás tarjetas -->
+      <!-- Producto 3 -->
+      <div class="col-12 col-md-4">
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden h-100">
+          <img src="https://images.unsplash.com/photo-1587734195503-904fca47e0e9?q=80&w=600" class="card-img-top" alt="Café Descafeinado">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">Descafeinado Suave</h5>
+            <p class="card-text text-muted flex-grow-1">Proceso natural con todo el sabor y aroma, sin cafeína.</p>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <span class="fs-5 fw-bold text-success">$13.00</span>
+              <button class="btn btn-outline-dark btn-sm rounded-pill">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
+  </section>
+
+  <!-- Pie de página -->
+  <footer class="bg-dark text-white text-center py-4 mt-5">
+    <div class="container">
+      <p class="mb-0">© 2026 Café Supremo - Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
   </div>
 
 </body>
